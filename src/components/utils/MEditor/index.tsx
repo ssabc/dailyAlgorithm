@@ -9,7 +9,7 @@ function MEditor (props:any) {
   }
   const onChange = (newValue:any, e:any) => {
     setCode(newValue)
-    // props.setValue(newValue)
+    props.setValue(newValue)
   }
   useEffect(()=>{
     props.editorInfo.defaultValue && setCode(props.editorInfo.defaultValue)
@@ -21,7 +21,7 @@ function MEditor (props:any) {
     language={props.editorInfo.language || 'javaScript'}
     theme="vs-dark"
     value={ code }
-    defaultValue={props.editorInfo.defaultValue || ''}
+    defaultValue={props.editorInfo.defaultValue}
     onChange={ onChange }
     editorDidMount={ editorDidMount } 
   />

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ContentWrap = styled.div`
+    padding: 0 15px;
     .title {
         font-size: 20px;
         font-weight: 800;
@@ -18,5 +19,8 @@ export const ContentWrap = styled.div`
     }
     .excute-result {
 
+    }
+    .tip {
+        color: #ff0000;
     }
 `
