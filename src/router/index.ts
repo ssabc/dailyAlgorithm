@@ -1,7 +1,7 @@
 import Home from '../pages/Home/index';
 
 import Algorithm1 from '../components/Algorithm1/index';
-
+import Algorithm2 from '../components/Algorithm2/index';
 interface router {
     path: string,
     exact?:boolean,
@@ -18,6 +18,10 @@ const routers:Array<router> = [
             {
                 path: '/algorithm1',
                 component: Algorithm1
+            },
+            {
+                path: '/algorithm2',
+                component: Algorithm2
             }
         ]
     }
