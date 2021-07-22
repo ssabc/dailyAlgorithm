@@ -19,12 +19,11 @@ function CommonView (props:any) {
             <div className="excute-result">
                 执行结果:
                 <div>
-                    {/* <code>{props.pData.result}</code> */}
                     <MEditor editorInfo={{
-                    defaultValue: props.pData.result,
-                    language: props.pData.language,
-                    height: 200
-                }}></MEditor>
+                        defaultValue: props.pData.result,
+                        language: props.pData.language,
+                        height: 200
+                    }}></MEditor>
                 </div>
             </div>
             

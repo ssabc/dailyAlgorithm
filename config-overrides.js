@@ -18,7 +18,7 @@ module.exports = override(
   }),
   config => {
     // 修改掉webpack里面devtool的配置
-     config.devtool = config.mode == 'development' ? 'cheap-module-source-map' : false;
+     config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
      return config;
   },
   MonacoWebpackPlugin && 
