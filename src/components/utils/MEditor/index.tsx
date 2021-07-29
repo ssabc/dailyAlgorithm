@@ -18,7 +18,8 @@ function MEditor (props:any) {
   return <MonacoEditor 
     width={props.editorInfo.width}
     height={props.editorInfo.height || 320}
-    language={props.editorInfo.language || 'javaScript'}
+    language={props.editorInfo.language || 'javascript'}
+    // language="javascript"
     theme="vs-dark"
     value={ code }
     defaultValue={props.editorInfo.defaultValue}

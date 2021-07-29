@@ -7,7 +7,7 @@
     "removeComments": true,
     "noLib": false,
     "allowJs": true,
-    "strict": true,
+    "strict": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

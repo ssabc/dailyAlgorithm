@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState } from 'react'
 import { ContentWrap } from './style';
 import CommonView from 'components/utils/CommonView';
 const code = `

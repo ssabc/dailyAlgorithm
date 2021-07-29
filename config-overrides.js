@@ -1,7 +1,9 @@
+const NODE_ENV=process.env.NODE_ENV;
 const { override, addWebpackAlias, addWebpackPlugin } = require('customize-cra');
 let MonacoWebpackPlugin = null
 // 开发环境配置 编辑器的颜色识别 （生成打包环境有错误）
-MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+// if (NODE_ENV == "development") 
+  MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 const path = require('path');
 const resolve = dir => path.join(__dirname, '.', dir)
@@ -18,11 +20,11 @@ module.exports = override(
   }),
   config => {
     // 修改掉webpack里面devtool的配置
-     config.devtool = config.mode === 'development' ? 'cheap-module-source-map' : false;
+     config.devtool = config.mode == 'development' ? 'cheap-module-source-map' : false;
      return config;
   },
   MonacoWebpackPlugin && 
   addWebpackPlugin(new MonacoWebpackPlugin({
-    languages: ['javascript']
+    languages: ['mysql', 'json', 'javascript']
   }))
 )
